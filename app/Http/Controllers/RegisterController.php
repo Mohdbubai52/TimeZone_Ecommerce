@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\User;
+use App\Mail\mailbox;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
+
+
 
 class RegisterController extends Controller
 {
@@ -26,6 +32,7 @@ class RegisterController extends Controller
         $Registration->save();
 
         // return redirect('/login');
+        Mail::to($request->mail)->send(new mailbox($request->name));
         // return redirect('/signin');
         return redirect('/home');          
         // dd($Registration);
