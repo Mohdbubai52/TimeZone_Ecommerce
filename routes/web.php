@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
@@ -23,3 +24,7 @@ Route::post('/signin',[RegisterController::class,'SaveData']); //Help to get dat
 // Login Method
 Route::get('/login',[LoginController::class,'LogIn']);
 Route::post('/login',[LoginController::class,'LogInAuthenthication']);
+
+// Custome Admin Pannels
+
+Route::get('/AdminPannel',[AdminController::class,'AdminPage']);
