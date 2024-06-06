@@ -19,7 +19,14 @@ class LoginController extends Controller
 
         if(Auth::attempt($Data))
         {
-            dd('Password is correct');
+            if(Auth::user()->Role == 0)
+            {
+                return redirect('/home');
+            }
+            else if(Auth::user()->Role == 1)
+            {
+                return redirect('/AdminPannel');
+            }
         }
         else{
             dd('password is incorrect');

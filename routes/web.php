@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BrandController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
@@ -28,3 +29,10 @@ Route::post('/login',[LoginController::class,'LogInAuthenthication']);
 // Custome Admin Pannels
 
 Route::get('/AdminPannel',[AdminController::class,'AdminPage']);
+
+// Brand Route 
+Route::get('/AdminPannel/Brands',[BrandController::class,'Index']);
+
+//creating new brand details  in table
+Route::get('/AdminPannel/Brands/Create',[BrandController::class,'Create']);
+Route::post('/AdminPannel/Brands/Create',[BrandController::class,'SaveInfo']);
