@@ -157,19 +157,9 @@
             <!-- End Sidebar scroll-->
         </aside>
         <div class="page-wrapper">
-            <div class="container-fluid">
-                <div class="row page-titles">
-                    <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Dashboard</h3>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                    </div>
-                    
-                </div>
-
-            </div>
+             <div class="container-fluid">
+                
+              </div> 
             <footer class="footer"> © 2018 Adminwrap by wrappixel.com </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
