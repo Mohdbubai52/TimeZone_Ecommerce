@@ -36,3 +36,4 @@ Route::get('/AdminPannel/Brands',[BrandController::class,'Index']);
 //creating new brand details  in table
 Route::get('/AdminPannel/Brands/Create',[BrandController::class,'Create']);
 Route::post('/AdminPannel/Brands/Create',[BrandController::class,'SaveInfo']);
+Route::get('/AdminPannel/Brands/Create',[BrandController::class,'SaveInfo']);
