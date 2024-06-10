@@ -31,8 +31,8 @@
                             <td>{{ $item->location }}</td>
                             <td>{{ $item->origin }}</td>
                             <td>{{ $item->rating }}</td>
-                            <td><button class="btn btn-danger btn-sm">Delete</button> <button
-                                    class="btn btn-sm btn-success">Edit</button></td>
+                            <td><a class="btn btn-danger btn-sm" href="{{url('/AdminPannel/Brands')}}?{{$item->id}}">Delete</a> <a
+                                    class="btn btn-sm btn-success"href="{{url('/AdminPannel/Brands/Edit')}}?{{$item->id}}" >Edit</a></td>
                         </tr>
                     @endforeach
 
