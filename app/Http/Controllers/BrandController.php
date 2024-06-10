@@ -25,14 +25,14 @@ class BrandController extends Controller
         // dd($request);
         // $Data = $request->only('name','seller','origin','location','rating');
         // dd($Data);
-        $SaveData = new BrandModel;
-
-        $SaveData->name = $request->name;
-        $SaveData->seller = $request->seller;
-        $SaveData->location = $request->location;
-        $SaveData->origin = $request->origin;
-        $SaveData->rating = $request->rating;
-        $SaveData->save();
+      
+        BrandModel::create([
+        'name' => $request->name,
+        'seller' => $request->seller,
+        'location' => $request->location,
+        'origin' => $request->origin,
+        'rating' => $request->rating,
+        ]);
 
         return redirect('/AdminPannel/Brands');     
     }
