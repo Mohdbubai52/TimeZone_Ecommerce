@@ -1,4 +1,4 @@
-@extends('Layout.AdminDashboard.AdminHeader');
+@extends('Layout.AdminDashboard.AdminHeader')
 @section('Pages')
     <div class="card">
         <h5 class="card-header">
@@ -31,8 +31,8 @@
                             <td>{{ $item->location }}</td>
                             <td>{{ $item->origin }}</td>
                             <td>{{ $item->rating }}</td>
-                            <td><a class="btn btn-danger btn-sm" href="{{url('/AdminPannel/Brands')}}?{{$item->id}}">Delete</a> <a
-                                    class="btn btn-sm btn-success"href="{{url('/AdminPannel/Brands/Edit')}}?{{$item->id}}" >Edit</a></td>
+                            <td><a class="btn btn-danger btn-sm" href="{{url('/AdminPannel/Brands/Delete/'.$item->id)}}">Delete</a> <a
+                                    class="btn btn-sm btn-success"href="{{url('/AdminPannel/Brands/Update/'.$item->id)}}" >Edit</a></td>
                         </tr>
                     @endforeach
 

@@ -37,3 +37,11 @@ Route::get('/AdminPannel/Brands',[BrandController::class,'Index']);
 Route::get('/AdminPannel/Brands/Create',[BrandController::class,'Create']);
 Route::post('/AdminPannel/Brands/Create',[BrandController::class,'SaveInfo']);
 // Route::get('/AdminPannel/Brands/Create',[BrandController::class,'SaveInfo']);
+
+
+// Update Brand
+Route::get('/AdminPannel/Brands/Update/{id}',[BrandController::class,'updateBrand']);
+Route::post('/AdminPannel/Brands/Update/{id}',[BrandController::class,'savebrand']);
+
+// Delete Brand
+Route::get('/AdminPannel/Brands/Delete/{id}',[BrandController::class,'DeleteBrand']);
